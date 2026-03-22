@@ -36,6 +36,7 @@ System design is crucial because real-world software systems need to satisfy mul
 Design decisions made in the early stages of development have a significant impact on the overall system. A well-thought-out design helps identify potential issues early, reducing the risk of costly changes later.
 
 If the design is flawed, problems discovered in later stages of development are much more difficult and expensive to fix. This is why investing time in system design upfront is essential for building robust and scalable systems.
+![cost of fixing defects vs development stage” graph](chart.png)
 
 ---
 
