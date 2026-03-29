@@ -14,12 +14,48 @@ If you're also learning system design, feel free to explore and use this as a re
 
 ## Index
 
+### Phase 1: Foundations
+
 - [What is System Design?](#what-is-system-design)
 - [Why is System Design Important?](#why-is-system-design-important)
+
+#### Networking Basics
+- [How the Internet Works](#how-the-internet-works)
 - [IP (Internet Protocol)](#ip-internet-protocol)
 - [IPv4](#ipv4)
 - [IPv6](#ipv6)
 - [IPv4 vs IPv6](#ipv4-vs-ipv6)
+- [Types of IP Addresses](#types-of-ip-addresses)
+
+#### DNS
+- [Domain Name System (DNS)](#domain-name-system-dns)
+- [Why is DNS Hierarchical?](#why-is-dns-hierarchical)
+- [Why is DNS Decentralized?](#why-is-dns-decentralized)
+- [How DNS Works](#how-dns-works)
+- [DNS Server Types](#dns-server-types)
+- [DNS Query Types](#dns-query-types)
+- [DNS Record Types](#dns-record-types)
+- [Subdomains](#subdomains)
+- [DNS Caching](#dns-caching)
+- [Reverse DNS](#reverse-dns)
+
+#### Communication Protocols
+- [TCP](#tcp-transmission-control-protocol)
+- [UDP](#udp-user-datagram-protocol)
+- [TCP vs UDP](#tcp-vs-udp)
+- [HTTP](#what-is-http)
+- [HTTPS](#what-is-https)
+
+---
+
+### Phase 2: Building Blocks (Coming Soon)
+### Phase 3: Architecture (Coming Soon)
+
+---
+
+## Phase 1: Foundations
+
+This section covers the fundamental concepts required to understand how systems communicate and operate over the internet. These topics form the base for all advanced system design concepts.
 
 ---
 
@@ -36,7 +72,7 @@ System design is crucial because real-world software systems need to satisfy mul
 Design decisions made in the early stages of development have a significant impact on the overall system. A well-thought-out design helps identify potential issues early, reducing the risk of costly changes later.
 
 If the design is flawed, problems discovered in later stages of development are much more difficult and expensive to fix. This is why investing time in system design upfront is essential for building robust and scalable systems.
-![cost of fixing defects vs development stage” graph](chart.png)
+![cost of fixing defects vs development stage graph](assets/chart.png)
 
 ---
 
@@ -72,6 +108,8 @@ When you visit a website:
 4. The server processes the request  
 5. The server sends back a response  
 6. The browser renders the webpage
+![Internet diagram](assets/howinternetworks.avif)
+
 ---
 
 ## IP (Internet Protocol)
@@ -184,6 +222,7 @@ A dynamic IP address is automatically assigned and can change over time.
 
 **Example:**  
 Your home router getting a different IP from the ISP periodically  
+
 ---
 
 ## Domain Name System (DNS)
@@ -243,7 +282,7 @@ This step-by-step approach makes lookup efficient.
 
 ---
 
-![dns hierarchy](dnshierarchy)
+![DNS hierarchy](assets/dns%20hierarchy.png)
 
 ---
 
@@ -314,7 +353,8 @@ DNS lookup involves the following steps:
 
 Once the IP address is resolved, the client can send a request to the server, and the server responds with the required content (e.g., a webpage).
 
-![image]()
+![How DNS works](assets/how-dns-works.png)
+
 ---
 
 ## DNS Server Types
@@ -488,6 +528,7 @@ Reverse DNS maps an IP address back to a domain name.
 ### Note
 
 Reverse DNS is not mandatory and is not used for general web browsing.
+
 ---
 
 ## TCP and UDP
@@ -497,6 +538,7 @@ Reverse DNS is not mandatory and is not used for general web browsing.
 ## TCP (Transmission Control Protocol)
 
 Transmission Control Protocol (TCP) is a **connection-oriented protocol** used for reliable communication between devices over a network.
+![tcp flow](assets/tcp.png)
 
 ---
 
@@ -574,6 +616,7 @@ While TCP is reliable, its feedback mechanisms introduce higher overhead and inc
 User Datagram Protocol (UDP) is a **connectionless protocol** used for fast data transmission over a network.
 
 Unlike TCP, UDP does not establish a connection and does not guarantee delivery.
+![udp flow](assets/udp.png)
 
 ---
 
